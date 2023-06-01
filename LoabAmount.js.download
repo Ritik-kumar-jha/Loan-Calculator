@@ -1,0 +1,13 @@
+function calculateLoanAmount_Click(){
+     var LoanAmountValue=document.getElementById('loan_Amount').value;
+     var InterestRateValue=document.getElementById('interest_Rate').value;
+     var  MonthlyPayValue=document.getElementById('monthly_Pay').value;
+       document.getElementById('txtMonthlyPayment').value=loanAmount(LoanAmountValue,InterestRateValue,MonthlyPayValue);
+       
+}
+function loanAmount(LoanAmountValue,InterestRateValue,MonthlyPayValue)
+{
+     var  interest=(LoanAmountValue*(InterestRateValue*0.01))/MonthlyPayValue;
+     var monthlyPayment=(LoanAmountValue/MonthlyPayValue+interest);
+     return monthlyPayment;
+}
